@@ -21,6 +21,8 @@ A SvelteKit-based frontend application for AI chat interactions.
 npm install --legacy-peer-deps
 ```
 
+> Note: The `--legacy-peer-deps` flag is required due to peer dependency conflicts between TipTap editor packages. This is safe to use and doesn't affect functionality.
+
 ### Development
 
 ```bash

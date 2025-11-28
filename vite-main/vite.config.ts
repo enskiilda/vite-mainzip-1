@@ -32,6 +32,17 @@ export default defineConfig({
         server: {
                 host: '0.0.0.0',
                 port: 5000,
-                allowedHosts: true
+                allowedHosts: true,
+                cors: true,
+                strictPort: false,
+                hmr: {
+                        clientPort: 443,
+                        protocol: 'wss'
+                },
+                headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Methods': '*',
+                        'Access-Control-Allow-Headers': '*'
+                }
         }
 });

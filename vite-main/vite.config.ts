@@ -35,10 +35,7 @@ export default defineConfig({
                 allowedHosts: true,
                 cors: true,
                 strictPort: false,
-                hmr: {
-                        clientPort: 443,
-                        protocol: 'wss'
-                },
+                hmr: false,
                 headers: {
                         'Access-Control-Allow-Origin': '*',
                         'Access-Control-Allow-Methods': '*',

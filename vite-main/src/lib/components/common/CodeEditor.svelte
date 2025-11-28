@@ -11,7 +11,7 @@
 
         import { oneDark } from '@codemirror/theme-one-dark';
 
-        import { onMount, createEventDispatcher, getContext, tick, onDestroy } from 'svelte';
+        import { onMount, createEventDispatcher, getContext, tick } from 'svelte';
 
         import { formatPythonCode } from '$lib/apis/utils';
         import { toast } from 'svelte-sonner';
@@ -233,11 +233,6 @@
                 };
         });
 
-        onDestroy(() => {
-                if (pyodideWorkerInstance) {
-                        pyodideWorkerInstance.terminate();
-                }
-        });
 </script>
 
 <div id="code-textarea-{id}" class="h-full w-full text-sm" />

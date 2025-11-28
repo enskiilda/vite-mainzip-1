@@ -1,7 +1,7 @@
 <script lang="ts">
         import hljs from 'highlight.js';
         import { toast } from 'svelte-sonner';
-        import { getContext, onMount, tick, onDestroy } from 'svelte';
+        import { getContext, onMount, tick } from 'svelte';
         import { config } from '$lib/stores';
 
         import { executeCode } from '$lib/apis/utils';
@@ -295,11 +295,6 @@
                 }
         });
 
-        onDestroy(() => {
-                if (pyodideWorker) {
-                        pyodideWorker.terminate();
-                }
-        });
 </script>
 
 <div>

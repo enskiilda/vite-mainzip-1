@@ -157,7 +157,10 @@
                 
                 loaded = true;
 
-                theme.set(localStorage.theme);
+                theme.set(localStorage.theme || 'dark');
+                if (!document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.add('dark');
+                }
                 mobile.set(window.innerWidth < BREAKPOINT);
 
                 initI18n(localStorage?.locale);

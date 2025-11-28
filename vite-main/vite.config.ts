@@ -35,7 +35,7 @@ export default defineConfig({
                 allowedHosts: true,
                 cors: true,
                 strictPort: false,
-                hmr: false,
+                hmr: true,
                 headers: {
                         'Access-Control-Allow-Origin': '*',
                         'Access-Control-Allow-Methods': '*',

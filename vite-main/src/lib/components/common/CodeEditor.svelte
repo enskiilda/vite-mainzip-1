@@ -11,13 +11,11 @@
 
         import { oneDark } from '@codemirror/theme-one-dark';
 
-        import { onMount, createEventDispatcher, getContext, tick } from 'svelte';
+        import { onMount, getContext, tick } from 'svelte';
 
         import { formatPythonCode } from '$lib/apis/utils';
         import { toast } from 'svelte-sonner';
-        import { user } from '$lib/stores';
 
-        const dispatch = createEventDispatcher();
         const i18n = getContext('i18n');
 
         export let boilerplate = '';
